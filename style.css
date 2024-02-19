@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+body{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin: 0;
+  background-color: hsl(30, 54%, 90%);
+
+  & h2{
+    font-family: "Young+Serif", sans-serif;
+    font-weight: 400;
+  }
+  & h3{
+    font-family: "Outfit", sans-serif;
+    font-weight: 300;
+  }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+.container{
+  background-color: white;
+  max-width: 700px;
+  margin: auto;
+  text-align: left;
+  border-radius: 20px;
+
+  & img{
+    transform: translateY(30px);
+    width: 90%;
+    border-radius: 10px;
+    margin: auto;
+    display: block;
+  }
+
+  .headLineStuff{
+    & h2{
+      padding-top: 40px;
+      font-size: 40px;
+      padding-left: 50px;
+      line-height: 0px;
+    }
+
+    & h3{
+      padding: 0px;
+      margin: 0;
+      padding-left: 50px;
+      padding-bottom: 20px;
+      font-size: 16px;
+      max-width: 625px;
+    }
+  }
+}
+
+.preperationTime{
+    margin: auto;
+    border-radius: 10px;
+    background-color: hsl(330, 100%, 98%);
+    max-width: 600px;
+    padding-bottom: 20px;
+
+    & h2{
+      padding-top: 30px;
+      color: hsl(332, 51%, 32%);
+      padding-left: 20px;
+    }
+    
+    & li {
+      padding-left: 25px;
+      list-style-type: none; /* Remove default bullet */
+      padding-bottom: 15px;
+  }
+  
+  & li::before {
+      content: "•"; /* Use a bullet character */
+      color: hsl(332, 51%, 32%); /* Change color of the bullet */
+      margin-right: 20px; /* Adjust spacing between bullet and text */
+      font-weight: bold; /* Optionally, make the bullet bold */
+  }
+  
+  & li span {
+      font-weight: bold;
+  }
+}
+
+.ingredients{
+  & h2{
+    color: hsl(14, 45%, 36%);
+    font-weight: 500;
+    font-family: "Outfit", sans-serif;
+    padding-left: 30px;
+  }
+  & li{
+    list-style-type: none;
+    color: hsl(30, 10%, 34%);
+    font-size: 16px;
+    padding-bottom: 10px;
+  }
+  & li::before {
+    content: "•"; /* Use a bullet character */
+    color: hsl(14, 45%, 36%); /* Change color of the bullet */
+    margin-right: 20px; /* Adjust spacing between bullet and text */
+    font-weight: bold; /* Optionally, make the bullet bold */
+    padding-left: 35px;
+  }
+}
+
+.seperatorIng{
+  padding-top: 20px;
+  margin: auto;
+  max-width: 635px;
+  border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+.seperatorNutri{
+  margin: auto;
+  max-width: 635px;
+  border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+.instructions{
+  & h2 {
+    color: hsl(14, 45%, 36%);
+    padding-left: 30px;
+    padding-top: 10px;
+  }
+
+  & ol{
+    padding-left: 50px;
+    max-width: 600px;
+    font-size: 16px;
+  }
+  & ol li {
+    counter-reset: section;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    font-weight: 500;
+    color: hsl(24, 5%, 18%);
+  }
+  & ol li::marker {
+    color: hsl(14, 45%, 36%); /* Change color of the numbers */
+    font-weight: 900;
+  }
+
+  & span{
+    font-weight: bold;
+    color: hsl(30, 10%, 34%);
+    font-size: 17px;
+  }
+}
+
+.nutrions{
+  padding-top: 20px;
+
+  & h2{
+    padding-left: 30px;
+    color: hsl(14, 45%, 36%);
+    line-height: 0;
+    padding-bottom: 5px;
+  }
+  & h3{
+    font-size: 16px;
+    padding-left: 30px;
+  }
+}
+
+.stats{
+  .nutriStats{
+    display: flex;
+    max-width: 635px;
+    margin: auto;
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+    gap: 200px;
+
+    & h3{
+      max-width: 0px;
+    }
+  }
+  .nutriStatsFat{
+    display: flex;
+    max-width: 635px;
+    margin: auto;
+    gap: 200px;
+
+    & h3{
+      max-width: 0px;
+    }
+  }
+}
+
+@media (max-width: 520px){
+  .container .headLineStuff h2{
+    font-size: 30px;
+    padding-top: 40px;
+    padding-left: 0;
+    text-align: center;
+  }
+  .container .headLineStuff h3{
+    font-size: 16px;
+    padding-left: 0;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .instructions ol li{
+    max-width: 500px;
+    padding-right: 30px;
+  }
+}
+@media (max-width: 375px){
+  .container .headLineStuff h2{
+    font-size: 20px;
+  }
+
+  .stats{
+    .nutriStats{
+      max-width: 300px;
+      gap: 100px;
+    }
+    .nutriStatsFat{
+      max-width: 300px;
+      gap: 100px;
+    }
+  }
+
+  .preperationTime{
+    margin: auto;
+    border-radius: 10px;
+    background-color: hsl(330, 100%, 98%);
+    max-width: 300px;
+    padding-bottom: 20px;
+  }
+
+  .seperatorIng{
+    max-width: 325px;
+  }
+  .seperatorNutri{
+    max-width: 325px;
+  }
+}
